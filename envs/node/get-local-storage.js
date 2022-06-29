@@ -15,6 +15,9 @@ function getLocalStorage(options) {
       configPath: options.path,
     }
   );
+  if (options.value) {
+    localStorage.set(options.value)
+  }
 
   debug(`session located in ${localStorage.path}`);
 
